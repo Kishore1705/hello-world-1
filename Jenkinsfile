@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Directory') {
             steps {
-                sh 'cd /home/slave5/workspace/javamaven/java-mvn-hello-world-web-app/'
+                sh 'cd /home/slave5/workspace/javapipelinejob/hello-world-1/'
             }
         }
         stage('Compile') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp /home/slave5/workspace/javamaven/java-mvn-hello-world-web-app/target/mvn-hello-world.war /opt/tomcat/webapps'
+                sh 'cp /home/slave5/workspace/javapipelinejob/hello-world-1/target/hello-world.war /opt/tomcat/webapps'
             }
         }
        stage('Run') {
